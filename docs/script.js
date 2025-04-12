@@ -24,7 +24,7 @@ city.addEventListener("change", () => {
 });
 
 card.forEach(cards=>{
-    cards.classList.add('w-auto','h-30','rounded-2xl', 'bg-[rgba(87,85,87,0.24)]','transform','transition-transform','duration-300','hover:scale-110','origin-center');
+    cards.classList.add('w-auto','h-15','md:h-30','rounded-2xl', 'bg-[rgba(87,85,87,0.24)]','transform','transition-transform','duration-300','hover:scale-110','origin-center');
 })
 
 
