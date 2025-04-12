@@ -8,14 +8,14 @@
   <link rel="stylesheet" href="output.css">
 </head>
 <!-- background  -->
-<body class="bg-[url('wp13528701.jpg')] md:bg-[url('bgweather.jpg')] bg-cover w-full h-full relative">
+<body class="bg-[url('wp13528701.jpg')] md:bg-[url('bgweather.jpg')] md:bg-cover bg-cover w-full h-full relative">
   <!-- city div -->
-  <div id="cityname" class=" absolute text-3xl flex justify-between p-2 w-fit h-fit top-11 left-1" ></div>  
+  <div id="cityname" class=" absolute  text-xs md:text-2xl mt-3.5 md:mt-0 flex justify-between p-2 w-fit h-fit top-11 left-1" ></div>  
   <!-- search bar div  -->
 
-  <div class=" w-full h-fit bg-cover md:flex md:justify-center " >
+  <div class=" w-full h-fit bg-cover flex justify-center " >
       
-      <div class="w-[60%] h-fit mt-12 md:shadow-slate-950">
+      <div class="w-[60%] h-fit mt-12">
         <select id="city" name="city" class="w-full h-10  md:text-2xl bg-[rgba(255,249,252,0.51)]  outline-none rounded-2xl cursor-pointer">
           <option  value="Delhi,IN">Delhi</option>
           <option  value="Mumbai,IN">Mumbai</option>
@@ -43,16 +43,16 @@
       
   </div>
   <!-- temperature box -->
-  <div class="temp-box h-fit  mt-5 w-auto flex justify-center p-3">
-          <div class="h-auto md:w-2xs bg-[rgba(87,85,87,0.24)] rounded-2xl flex items-center flex-col transition-transform duration-300 hover:scale-105 cursor-pointer">
+  <div class="temp-box h-fit  mt-5 w-auto flex justify-center p-1.5 md:p-3">
+          <div class="h-auto w-auto p-2 md:p-0 md:w-2xs bg-[rgba(87,85,87,0.24)] rounded-2xl flex items-center flex-col transition-transform duration-300 hover:scale-105 cursor-pointer">
              <div id="temp-p" class="flex flex-col items-center"></div>
-             <img  alt="icon" id="temp-icon" class="text-4xl">
-             <div id="description"  class="text-2sm mb-1"></div>
+             <img  alt="icon" id="temp-icon" class="h-10 w-auto md:h-auto md:w-auto">
+             <div id="description"  class="text-sm md:text-2sm md:mb-1"></div>
           </div>
   </div>
   <!-- crads on the pages  -->
  <div class="w-full flex justify-center">
-  <div class="card-box w-auto mt-8 grid grid-cols-3 gap-3  justify-center  items-center h-auto  ">
+  <div class="card-box w-auto mt-8 grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-3  justify-center  items-center h-auto  ">
     <div id="humidity" class="card transition-transform duration-300 hover:scale-75 cursor-pointer"></div>
     <div id="visibility" class="card transition-transform duration-300 hover:scale-75 cursor-pointer" ></div>
     <div id="airpressure" class="card transition-transform duration-300 hover:scale-75 cursor-pointer"></div>
