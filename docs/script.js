@@ -107,7 +107,7 @@ const data =async ()=> {
     <p class="text-xs md:text-xl p-1.5">${citydata.main["humidity"]}%</p>`
 
     visibility.innerHTML=`<p class="md:text-xl text-xs p-1.5"><i class="fa-solid fa-cloud"></i></i></p>
-    <p class="md:text-3xl text-xl">Visibility</p>
+    <p class="md:text-3xl text-xl">Clouds</p>
     <p class="text-xs md:text-xl p-1.5">${citydata.clouds.all}%</p>`
 
     airpressure.innerHTML=`<p class="md:text-xl text-xs p-1.5"><i class="fa-solid fa-wind"></i></p>
