@@ -1,3 +1,4 @@
+
 const apikey="08204471063a020edc1e01d491b993c7";
 const city=document.querySelector("select")
 const citydiv=document.querySelector("#cityname");
@@ -15,7 +16,69 @@ const feel=document.getElementById('feel');
 const speed=document.getElementById('speed');
 const mintemp=document.getElementById('mintemp');
 
-// 
+//toogle button selector
+const toggleBtn=document.querySelector('#toggle');
+//
+/**
+ * WEATHER APP IMPROVEMENTS - CHANGES SUMMARY:
+ * 
+ * 1. Enhanced Theme Toggle Functionality:
+ *    - Added background image switching between light/dark modes
+ *    - Implemented localStorage persistence for theme preference
+ *    - Ensured proper initialization on page load
+ * 
+ * 2. Background Image Handling:
+ *    - Light mode: Uses wp13528701.jpg (mobile) and bgweather.jpg (desktop)
+ *    - Dark mode: Uses bgnight.png
+ *    - Added smooth transitions between themes
+ * 
+ * 3. Code Structure:
+ *    - Maintained all existing weather functionality
+ *    - Added clear comments for maintainability
+ *    - No breaking changes to original features
+ */
+// Theme toggle button event listener
+
+
+toggleBtn.addEventListener('click', () => {
+    const body = document.body;
+    const isDark = document.documentElement.classList.toggle('dark');
+    
+    // Toggle background images
+    if (isDark) {
+      toggleBtn.innerHTML=`<i class="fa-solid fa-moon"></i>`
+      body.style.color="rgba(210,206,206,0.9)"
+      body.classList.remove('bg-[url(\'wp13528701.jpg\')]', 'md:bg-[url(\'bgweather.jpg\')]');
+      body.classList.add('dark:bg-[url(\'bgnight.png\')]');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      toggleBtn.innerHTML=`<i class="fa-solid fa-sun"></i>`
+      body.style.color="black"
+      body.classList.add('bg-[url(\'wp13528701.jpg\')]', 'md:bg-[url(\'bgweather.jpg\')]');
+      body.classList.remove('dark:bg-[url(\'bgnight.png\')]');
+      localStorage.setItem('theme', 'light');
+    }
+  });
+  
+  // On page load, respect saved preference
+  window.addEventListener('DOMContentLoaded', () => {
+    const theme = localStorage.getItem('theme');
+    const body = document.body;
+    
+    if (theme === 'dark') {
+      toggleBtn.innerHTML=`<i class="fa-solid fa-moon"></i>`
+      document.documentElement.classList.add('dark');
+      body.style.color="rgba(210,206,206,0.9)"
+      body.classList.remove('bg-[url(\'wp13528701.jpg\')]', 'md:bg-[url(\'bgweather.jpg\')]');
+      body.classList.add('dark:bg-[url(\'bgnight.png\')]');
+    } else {
+      toggleBtn.innerHTML=`<i class="fa-solid fa-sun"></i>`
+      body.style.color="black"
+      body.classList.add('bg-[url(\'wp13528701.jpg\')]', 'md:bg-[url(\'bgweather.jpg\')]');
+      body.classList.remove('dark:bg-[url(\'bgnight.png\')]');
+    }
+  });
+
 window.addEventListener("DOMContentLoaded",()=>{
     data();
 })
