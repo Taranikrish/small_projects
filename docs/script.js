@@ -51,7 +51,7 @@ const data =async ()=> {
     <p class="text-xl md:text-3xl">Air Pressure</p>
     <p class="text-xs md:text-xl p-1.5">${citydata.main["pressure"]}hpa</p>`
 
-    feel.innerHTML=`<p class="md:text-ls text-xs p-1.5"><i class="fa-solid fa-temperature-low"></i></p>
+    feel.innerHTML=`<p class="md:text-xl text-xs p-1.5"><i class="fa-solid fa-temperature-low"></i></p>
     <p class="text-xl md:text-3xl">Feels like</p>
     <p class=" text-xs md:text-xl p-1.5">${citydata.main["feels_like"]}°</p>`
 
